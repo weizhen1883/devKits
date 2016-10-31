@@ -1,0 +1,42 @@
+[Eagle]
+Version="07 05 00"
+Platform="Mac OS X"
+Serial="7316F9B6D5-LSR-WLM-5CS"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="/Users/zhenw/Desktop/ivani_files/ivani_hardware/ivani_lib/RFDigital.lbr"
+UsedLibrary="/Users/zhenw/Desktop/ivani_files/ivani_hardware/ivani_lib/ivani_lib.lbr"
+UsedLibrary="/Users/zhenw/Desktop/ivani_files/ivani_hardware/ivani_lib/ivani_lib_power.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Amplifiers.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/BJTs.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Battery Holders.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Buzzers.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Capacitors.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Connectors.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Diodes.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/FETs.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/FTDI.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Fuse.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/H-Bridges.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/ICs.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Inductors.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/LEDs.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/MCUs.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Modules.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Power Supplies.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Resistors.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/Switches.lbr"
+UsedLibrary="/Users/zhenw/Desktop/eaglePCBLibrary/power.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="670 148 1269 547"
+State=2
+Number=0
+
+[Desktop]
+Screen="1440 900"
+Window="Win_1"
