@@ -1,10 +1,9 @@
-*.lck
+*.gpi
+*.dri
 *.drd
 *.GBL
-*.GTL
-*.dri
-*.GTO
-*.GBO
-*.gpi
 *.GBS
+*.GBO
+*.GTO
+*.GTL
 *.GTS
