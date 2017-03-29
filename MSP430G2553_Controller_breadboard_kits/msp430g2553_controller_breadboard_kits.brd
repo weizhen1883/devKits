@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="8.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -571,10 +571,10 @@ design rules under a new name.</description>
 <element name="C5" library="Capacitors" package="0805" value="0.1uF" x="11.5" y="29" rot="MR90"/>
 <element name="USB1" library="Connectors" package="MICRO-USB-B-SMD-SMD" value="" x="8.35" y="42.5" rot="R180"/>
 <element name="U2" library="FTDI" package="SSOP-28" value="" x="8.35" y="33" rot="R270"/>
-<element name="C6" library="Capacitors" package="0805" value="" x="4.5" y="34.5" rot="MR90"/>
-<element name="C7" library="Capacitors" package="0805" value="" x="13" y="39.5" rot="MR180"/>
-<element name="C8" library="Capacitors" package="0805" value="" x="13" y="37.5" rot="MR180"/>
-<element name="R5" library="Resistors" package="0805" value="" x="6" y="27" rot="MR270"/>
+<element name="C6" library="Capacitors" package="0805" value="0.1uF" x="4.5" y="34.5" rot="MR90"/>
+<element name="C7" library="Capacitors" package="0805" value="10uF" x="13" y="39.5" rot="MR180"/>
+<element name="C8" library="Capacitors" package="0805" value="0.1uF" x="13" y="37.5" rot="MR180"/>
+<element name="R5" library="Resistors" package="0805" value="1K" x="6" y="27" rot="MR270"/>
 </elements>
 <signals>
 <signal name="P1.5">

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="8.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1212,13 +1212,13 @@
 <part name="C5" library="Capacitors" deviceset="CAPACITOR_FIXED" device="_0805" value="0.1uF"/>
 <part name="USB1" library="Connectors" deviceset="USB-2.0-MICRO" device="_SMD_SMD"/>
 <part name="U2" library="FTDI" deviceset="FT232RL" device="_SSOP28"/>
-<part name="C6" library="Capacitors" deviceset="CAPACITOR_FIXED" device="_0805"/>
-<part name="C7" library="Capacitors" deviceset="CAPACITOR_FIXED" device="_0805"/>
-<part name="C8" library="Capacitors" deviceset="CAPACITOR_FIXED" device="_0805"/>
+<part name="C6" library="Capacitors" deviceset="CAPACITOR_FIXED" device="_0805" value="0.1uF"/>
+<part name="C7" library="Capacitors" deviceset="CAPACITOR_FIXED" device="_0805" value="10uF"/>
+<part name="C8" library="Capacitors" deviceset="CAPACITOR_FIXED" device="_0805" value="0.1uF"/>
 <part name="DGND2" library="power" deviceset="DGND" device=""/>
 <part name="+3V2" library="power" deviceset="+3V3" device=""/>
 <part name="P+1" library="power" deviceset="+5V" device=""/>
-<part name="R5" library="Resistors" deviceset="RESISTOR" device="_0805"/>
+<part name="R5" library="Resistors" deviceset="RESISTOR" device="_0805" value="1K"/>
 </parts>
 <sheets>
 <sheet>
