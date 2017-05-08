@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="8.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11,6 +11,16 @@
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -134,10 +144,14 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="30" y2="0" width="0.1" layer="20"/>
-<wire x1="30" y1="0" x2="30" y2="22" width="0.1" layer="20"/>
-<wire x1="30" y1="22" x2="0" y2="22" width="0.1" layer="20"/>
-<wire x1="0" y1="22" x2="0" y2="0" width="0.1" layer="20"/>
+<wire x1="0" y1="20" x2="0" y2="2" width="0.1" layer="20"/>
+<wire x1="0" y1="2" x2="2" y2="0" width="0.1" layer="20" curve="90"/>
+<wire x1="2" y1="0" x2="28" y2="0" width="0.1" layer="20"/>
+<wire x1="28" y1="0" x2="30" y2="2" width="0.1" layer="20" curve="90"/>
+<wire x1="30" y1="2" x2="30" y2="20" width="0.1" layer="20"/>
+<wire x1="30" y1="20" x2="28" y2="22" width="0.1" layer="20" curve="90"/>
+<wire x1="28" y1="22" x2="2" y2="22" width="0.1" layer="20"/>
+<wire x1="2" y1="22" x2="0" y2="20" width="0.1" layer="20" curve="90"/>
 </plain>
 <libraries>
 <library name="Capacitors">
@@ -522,19 +536,31 @@ design rules under a new name.</description>
 <contactref element="C11" pad="2"/>
 <contactref element="C12" pad="2"/>
 <polygon width="0.254" layer="1">
-<vertex x="1" y="21"/>
-<vertex x="29" y="21"/>
-<vertex x="29" y="1"/>
-<vertex x="1" y="1"/>
+<vertex x="27" y="1"/>
+<vertex x="3" y="1" curve="-90"/>
+<vertex x="1" y="3"/>
+<vertex x="1" y="19" curve="-90"/>
+<vertex x="3" y="21"/>
+<vertex x="27" y="21" curve="-90"/>
+<vertex x="29" y="19"/>
+<vertex x="29" y="3" curve="-90"/>
 </polygon>
 <contactref element="J1" pad="1"/>
 <contactref element="J2" pad="1"/>
 <polygon width="0.254" layer="16">
-<vertex x="1" y="21"/>
-<vertex x="29" y="21"/>
-<vertex x="29" y="1"/>
-<vertex x="1" y="1"/>
+<vertex x="27" y="1"/>
+<vertex x="3" y="1" curve="-90"/>
+<vertex x="1" y="3"/>
+<vertex x="1" y="19" curve="-90"/>
+<vertex x="3" y="21"/>
+<vertex x="27" y="21" curve="-90"/>
+<vertex x="29" y="19"/>
+<vertex x="29" y="3" curve="-90"/>
 </polygon>
+<contactref element="USB1" pad="M1"/>
+<contactref element="USB1" pad="M2"/>
+<contactref element="USB1" pad="M3"/>
+<contactref element="USB1" pad="M4"/>
 </signal>
 <signal name="D+">
 <contactref element="USB1" pad="3"/>
@@ -708,21 +734,21 @@ design rules under a new name.</description>
 <wire x1="25.125" y1="14.605" x2="24.475" y2="15.255" width="0.254" layer="1"/>
 <wire x1="7.5" y1="6.48" x2="6.48" y2="6.48" width="0.254" layer="16"/>
 <wire x1="6.48" y1="6.48" x2="6" y2="6" width="0.254" layer="16"/>
-<via x="16" y="5" extent="1-16" drill="0.5"/>
-<wire x1="21" y1="9" x2="17" y2="9" width="0.254" layer="1"/>
-<wire x1="16.5" y1="8.5" x2="16" y2="8" width="0.254" layer="1"/>
-<wire x1="16" y1="8" x2="16" y2="5" width="0.254" layer="1"/>
-<wire x1="14.025" y1="8.5" x2="16.5" y2="8.5" width="0.254" layer="1"/>
-<wire x1="16.5" y1="8.5" x2="17" y2="9" width="0.254" layer="1"/>
+<via x="16.5" y="5.5" extent="1-16" drill="0.5"/>
+<wire x1="21" y1="9" x2="17.5" y2="9" width="0.254" layer="1"/>
+<wire x1="17" y1="8.5" x2="16.5" y2="8" width="0.254" layer="1"/>
+<wire x1="16.5" y1="8" x2="16.5" y2="5.5" width="0.254" layer="1"/>
+<wire x1="14.025" y1="8.5" x2="17" y2="8.5" width="0.254" layer="1"/>
+<wire x1="17" y1="8.5" x2="17.5" y2="9" width="0.254" layer="1"/>
 <wire x1="27.5" y1="10.5" x2="23" y2="6" width="0.254" layer="16"/>
 <wire x1="23" y1="6" x2="17" y2="6" width="0.254" layer="16"/>
 <wire x1="25.5" y1="15.5" x2="24.23" y2="15.5" width="0.254" layer="1"/>
 <wire x1="25.5" y1="15.5" x2="27.5" y2="13.5" width="0.254" layer="16"/>
 <wire x1="27.5" y1="13.5" x2="27.5" y2="10.5" width="0.254" layer="16"/>
-<wire x1="16" y1="5" x2="15.5" y2="4.5" width="0.254" layer="1"/>
+<wire x1="16.5" y1="5.5" x2="15.5" y2="4.5" width="0.254" layer="1"/>
 <wire x1="15.5" y1="4.5" x2="6.5" y2="4.5" width="0.254" layer="1"/>
 <wire x1="6.5" y1="4.5" x2="6" y2="4" width="0.254" layer="1"/>
-<wire x1="17" y1="6" x2="16" y2="5" width="0.254" layer="16"/>
+<wire x1="17" y1="6" x2="16.5" y2="5.5" width="0.254" layer="16"/>
 </signal>
 <signal name="+5V">
 <contactref element="C11" pad="1"/>
@@ -744,11 +770,6 @@ design rules under a new name.</description>
 <wire x1="21" y1="18" x2="13.475" y2="18" width="0.254" layer="1"/>
 <wire x1="13.475" y1="18" x2="11.975" y2="16.5" width="0.254" layer="1"/>
 <contactref element="J2" pad="2"/>
-<wire x1="11" y1="1.5" x2="11.5" y2="1" width="0.254" layer="16"/>
-<wire x1="11.5" y1="1" x2="16.35" y2="1" width="0.254" layer="16"/>
-<wire x1="16.35" y1="1" x2="17.69" y2="2.34" width="0.254" layer="16"/>
-<wire x1="11" y1="1.5" x2="10.975" y2="1.5" width="0.254" layer="16"/>
-<wire x1="10.975" y1="1.5" x2="9.975" y2="2.5" width="0.254" layer="16"/>
 <via x="11.5" y="18" extent="1-16" drill="0.5"/>
 <wire x1="11.5" y1="18" x2="13.475" y2="18" width="0.254" layer="1"/>
 <wire x1="9.975" y1="2.5" x2="9" y2="3.475" width="0.254" layer="16"/>
@@ -756,10 +777,12 @@ design rules under a new name.</description>
 <wire x1="9" y1="5" x2="9" y2="7" width="0.254" layer="16"/>
 <wire x1="9" y1="7" x2="9" y2="15.5" width="0.254" layer="16"/>
 <wire x1="9" y1="15.5" x2="11.5" y2="18" width="0.254" layer="16"/>
-<wire x1="10.3" y1="4.58" x2="9.42" y2="4.58" width="0.254" layer="16"/>
+<wire x1="9.42" y1="4.58" x2="10.3" y2="4.58" width="0.254" layer="16"/>
 <wire x1="9.42" y1="4.58" x2="9" y2="5" width="0.254" layer="16"/>
 <wire x1="10.3" y1="6.48" x2="9.52" y2="6.48" width="0.254" layer="16"/>
 <wire x1="9.52" y1="6.48" x2="9" y2="7" width="0.254" layer="16"/>
+<wire x1="10.3" y1="4.58" x2="15.45" y2="4.58" width="0.254" layer="16"/>
+<wire x1="15.45" y1="4.58" x2="17.69" y2="2.34" width="0.254" layer="16"/>
 </signal>
 <signal name="N$35">
 <contactref element="D11" pad="1"/>
@@ -774,7 +797,6 @@ design rules under a new name.</description>
 <approved hash="1,20,fffbcf0bcd1cfdec"/>
 <approved hash="1,20,b5f949093702cbf2"/>
 <approved hash="1,20,feea4e1a4d46fdb6"/>
-<approved hash="1,20,061a42ea5ca81858"/>
 <approved hash="1,20,18245cd45c1a18ea"/>
 <approved hash="1,20,ca252ed52ed4ca24"/>
 <approved hash="1,20,940ea4fea4be944e"/>
@@ -784,6 +806,20 @@ design rules under a new name.</description>
 <approved hash="4,1,1f6ece67e7f6c2d6"/>
 <approved hash="4,1,718adaaff336b9fa"/>
 <approved hash="4,1,88dd4ae3e07ad625"/>
+<approved hash="1,20,cc193ce93d22cdd2"/>
+<approved hash="1,20,dd7a398a3888dc78"/>
+<approved hash="1,20,142bd8dbd6c91a39"/>
+<approved hash="1,20,c36bf39bcca4fc54"/>
+<approved hash="1,20,ca1936e936a2ca52"/>
+<approved hash="1,20,1a645e945ea21a52"/>
+<approved hash="1,20,061a42ea5ca81858"/>
+<approved hash="1,20,19e25d125e101ae0"/>
+<approved hash="1,20,141450e45ef21a02"/>
+<approved hash="1,20,9a26aad6a5d69526"/>
+<approved hash="1,20,938ea37ea53e95ce"/>
+<approved hash="1,20,1a5bd6abd6991a69"/>
+<approved hash="1,20,2e3beacbe8d82c28"/>
+<approved hash="1,20,d42430d43fdadb2a"/>
 </errors>
 </board>
 </drawing>

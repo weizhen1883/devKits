@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="8.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -218,6 +228,22 @@
 <text x="2.5" y="0.5" size="0.6096" layer="25" align="center-left">&gt;NAME</text>
 <text x="2.5" y="-0.5" size="0.6096" layer="27" align="center-left">&gt;VALUE</text>
 </package>
+<package name="5MM_TH">
+<pad name="A" x="-1.27" y="0" drill="1" shape="square"/>
+<pad name="K" x="1.27" y="0" drill="1" shape="octagon"/>
+<wire x1="2.5" y1="1.5" x2="2.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="2.5" y1="1.5" x2="2.5" y2="-1.5" width="0.127" layer="21" curve="298.072487"/>
+<wire x1="-0.5" y1="-1" x2="-0.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-1.5" x2="-0.5" y2="-2" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-2" x2="0.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-1.5" x2="-0.5" y2="-1" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-1" x2="0.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-1.5" x2="0.5" y2="-2" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-1.5" x2="1" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-1.5" x2="-1" y2="-1.5" width="0.127" layer="21"/>
+<text x="0" y="1.5" size="0.6096" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="1.5" size="0.6096" layer="27" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="LED">
@@ -237,8 +263,8 @@
 <wire x1="0.8" y1="1.6" x2="0.6" y2="1.6" width="0.15" layer="94"/>
 <wire x1="0.6" y1="1.6" x2="0.8" y2="1.4" width="0.15" layer="94"/>
 <wire x1="0.8" y1="1.4" x2="0.8" y2="1.6" width="0.15" layer="94"/>
-<pin name="1" x="0" y="2" visible="off" length="point" direction="pas" rot="R270"/>
-<pin name="2" x="0" y="-3" visible="off" length="point" direction="pas" rot="R90"/>
+<pin name="K" x="0" y="2" visible="off" length="point" direction="pas" rot="R270"/>
+<pin name="A" x="0" y="-3" visible="off" length="point" direction="pas" rot="R90"/>
 <text x="1" y="0.5" size="0.6096" layer="95" align="center-left">&gt;NAME</text>
 <text x="1" y="-0.5" size="0.6096" layer="96" align="center-left">&gt;VALUE</text>
 </symbol>
@@ -251,8 +277,17 @@
 <devices>
 <device name="-0805" package="0805DIODE">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="A" pad="2"/>
+<connect gate="G$1" pin="K" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-TH" package="5MM_TH">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -382,11 +417,11 @@
 </packages>
 <symbols>
 <symbol name="USB-2.0-MICRO">
-<pin name="D+" x="1.96" y="0" visible="pad" length="point" direction="pas" rot="R180"/>
-<pin name="D-" x="1.96" y="2" visible="pad" length="point" direction="pas" rot="R180"/>
-<pin name="VBUS" x="1.96" y="4" visible="pad" length="point" direction="pas" rot="R180"/>
-<pin name="ID" x="1.96" y="-2" visible="pad" length="point" direction="pas" rot="R180"/>
-<pin name="GND" x="1.96" y="-4" visible="pad" length="point" direction="pas" rot="R180"/>
+<pin name="D+" x="2" y="0" visible="pad" length="point" direction="pas" rot="R180"/>
+<pin name="D-" x="2" y="2" visible="pad" length="point" direction="pas" rot="R180"/>
+<pin name="VBUS" x="2" y="4" visible="pad" length="point" direction="pas" rot="R180"/>
+<pin name="ID" x="2" y="-2" visible="pad" length="point" direction="pas" rot="R180"/>
+<pin name="GND" x="2" y="-4" visible="pad" length="point" direction="pas" rot="R180"/>
 <wire x1="0.5" y1="4" x2="0.5" y2="5.5" width="0.15" layer="94"/>
 <wire x1="0.5" y1="5.5" x2="-2.5" y2="5.5" width="0.15" layer="94"/>
 <wire x1="0.5" y1="4" x2="0.5" y2="2" width="0.15" layer="94"/>
@@ -446,7 +481,7 @@
 <connect gate="G$1" pin="D-" pad="2"/>
 <connect gate="G$1" pin="GND" pad="5"/>
 <connect gate="G$1" pin="ID" pad="4"/>
-<connect gate="G$1" pin="SHIELD" pad="S1 S2"/>
+<connect gate="G$1" pin="SHIELD" pad="M1 M2 M3 M4 S1 S2"/>
 <connect gate="G$1" pin="VBUS" pad="1"/>
 </connects>
 <technologies>
@@ -957,7 +992,7 @@
 <junction x="25.5" y="31.5"/>
 <junction x="22.5" y="31.5"/>
 <pinref part="USB1" gate="G$1" pin="GND"/>
-<wire x1="5.96" y1="41.5" x2="6.5" y2="41.5" width="0.1524" layer="91"/>
+<wire x1="6" y1="41.5" x2="6.5" y2="41.5" width="0.1524" layer="91"/>
 <wire x1="6.5" y1="41.5" x2="6.5" y2="31.5" width="0.1524" layer="91"/>
 <junction x="6.5" y="31.5"/>
 </segment>
@@ -993,7 +1028,7 @@
 <net name="D+" class="0">
 <segment>
 <pinref part="USB1" gate="G$1" pin="D+"/>
-<wire x1="5.96" y1="45.5" x2="15" y2="45.5" width="0.1524" layer="91"/>
+<wire x1="6" y1="45.5" x2="15" y2="45.5" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="15" y1="45.5" x2="16.5" y2="45.5" width="0.1524" layer="91"/>
@@ -1005,7 +1040,7 @@
 <net name="D-" class="0">
 <segment>
 <pinref part="USB1" gate="G$1" pin="D-"/>
-<wire x1="5.96" y1="47.5" x2="12" y2="47.5" width="0.1524" layer="91"/>
+<wire x1="6" y1="47.5" x2="12" y2="47.5" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="12" y1="47.5" x2="16.5" y2="47.5" width="0.1524" layer="91"/>
@@ -1037,12 +1072,12 @@
 <pinref part="F1" gate="G$1" pin="1"/>
 <junction x="9" y="49.5"/>
 <pinref part="USB1" gate="G$1" pin="VBUS"/>
-<wire x1="5.96" y1="49.5" x2="9" y2="49.5" width="0.1524" layer="91"/>
+<wire x1="6" y1="49.5" x2="9" y2="49.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RX_LED" class="0">
 <segment>
-<pinref part="D9" gate="G$1" pin="1"/>
+<pinref part="D9" gate="G$1" pin="K"/>
 <pinref part="U2" gate="G$1" pin="17"/>
 <wire x1="47.5" y1="35.5" x2="44.5" y2="35.5" width="0.1524" layer="91"/>
 <label x="44.5" y="35.5" size="0.6096" layer="95"/>
@@ -1050,7 +1085,7 @@
 </net>
 <net name="TX_LED" class="0">
 <segment>
-<pinref part="D10" gate="G$1" pin="1"/>
+<pinref part="D10" gate="G$1" pin="K"/>
 <pinref part="U2" gate="G$1" pin="10"/>
 <wire x1="47.5" y1="33.5" x2="44.5" y2="33.5" width="0.1524" layer="91"/>
 <label x="44.5" y="33.5" size="0.6096" layer="95"/>
@@ -1082,14 +1117,14 @@
 </net>
 <net name="N$32" class="0">
 <segment>
-<pinref part="D9" gate="G$1" pin="2"/>
+<pinref part="D9" gate="G$1" pin="A"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="52.5" y1="35.5" x2="53" y2="35.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$33" class="0">
 <segment>
-<pinref part="D10" gate="G$1" pin="2"/>
+<pinref part="D10" gate="G$1" pin="A"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="52.5" y1="33.5" x2="53" y2="33.5" width="0.1524" layer="91"/>
 </segment>
@@ -1177,7 +1212,7 @@
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="D11" gate="G$1" pin="2"/>
+<pinref part="D11" gate="G$1" pin="A"/>
 <wire x1="25.5" y1="18" x2="25.5" y2="17.5" width="0.15" layer="91"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 </segment>
@@ -1249,7 +1284,7 @@
 </net>
 <net name="N$35" class="0">
 <segment>
-<pinref part="D11" gate="G$1" pin="1"/>
+<pinref part="D11" gate="G$1" pin="K"/>
 <pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="25.5" y1="12.5" x2="25.5" y2="12" width="0.15" layer="91"/>
 </segment>
